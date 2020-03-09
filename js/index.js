@@ -70,14 +70,35 @@ document.querySelector('button').textContent = siteContent.cta['button'];
 document.getElementById('middle-img').setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 // //features
-document.querySelector('h4').textContent = siteContent['main-content']['features-h4'];
-document.querySelector('p').textContent = siteContent['main-content']['features-content'];
+// document.querySelector('h4').textContent = siteContent['main-content']['features-h4'];
+// document.querySelector('p').textContent = siteContent['main-content']['features-content'];
+
+let mainContentHeaders = document.querySelectorAll('h4');
+mainContentHeaders[0].textContent = siteContent['main-content']['features-h4'];
+mainContentHeaders[1].textContent = siteContent['main-content']['about-h4'];
+mainContentHeaders[2].textContent = siteContent['main-content']['services-h4'];
+mainContentHeaders[3].textContent = siteContent['main-content']['product-h4'];
+mainContentHeaders[4].textContent = siteContent['main-content']['vision-h4'];
+
+let mainContentParagraphs = document.querySelectorAll('p');
+mainContentParagraphs[0].textContent = siteContent['main-content']['features-content'];
+mainContentParagraphs[1].textContent = siteContent['main-content']['about-content'];
+mainContentParagraphs[2].textContent = siteContent['main-content']['services-content'];
+mainContentParagraphs[3].textContent = siteContent['main-content']['product-content'];
+mainContentParagraphs[4].textContent = siteContent['main-content']['vision-content'];
 
 
+//Contact
+document.querySelector('.contact h4').textContent = siteContent.contact['contact-h4'];
+document.querySelector('.contact p:nth-of-type(1)').textContent = siteContent.contact['address'];
+document.querySelector('.contact p:nth-of-type(2)').textContent = siteContent.contact['phone'];
+document.querySelector('.contact p:nth-of-type(3)').textContent = siteContent.contact['email'];
 
+//footer
+let footerSec = document.querySelector('footer');
+footerSec.textContent = siteContent.footer['copyright'];
 
-
-
+//:]
 
 
 
