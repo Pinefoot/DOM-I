@@ -6,6 +6,7 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "nav-item-7": "Home",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -53,6 +54,36 @@ document.querySelector('a:nth-of-type(3)').textContent = siteContent.nav['nav-it
 document.querySelector('a:nth-of-type(4)').textContent = siteContent.nav['nav-item-4'];
 document.querySelector('a:nth-of-type(5)').textContent = siteContent.nav['nav-item-5'];
 document.querySelector('a:nth-of-type(6)').textContent = siteContent.nav['nav-item-6'];
+
+//changing color
+let navColor = document.querySelectorAll('a');
+navColor.forEach(element => {
+  element.style.color = '#008000';
+});
+
+//prepend and appendChild
+let newNavItem = document.createElement('a')
+newNavItem.textContent = 'Home';
+newNavItem.style.color = '#008000';
+let updatedNavItem = document.querySelector('nav');
+
+updatedNavItem.prepend(newNavItem);
+
+//appendChild
+let anotherNav = document.createElement('a');
+anotherNav.textContent = "Have an Idea?!";
+anotherNav.style.color = "#008000";
+let anotherUpdate = document.querySelector ('nav');
+
+anotherUpdate.appendChild(anotherNav);
+
+
+
+
+  
+
+
+
 
 //body items
 
